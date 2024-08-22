@@ -5,10 +5,29 @@
         body {
             overflow: hidden;
         }
+
+        body *:not(.backround) {
+            position: relative;
+
+            z-index: 1;
+
+            order: 1;
+        }
+
         .backround {
+            order: 2;
             width: 100vw;
             height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
+.bigger{
+
+font-size: 72px;
+
+}
+
     </style>
 
 
@@ -16,6 +35,9 @@
 
 </head>
 
-<body><img src="assets/bg.gif" alt="backround" class="backround"></body>
+<body>
+    <p class="bigger">Score:</p>
+    <img src="assets/bg.gif" alt="backround" class="backround">
+</body>
 
 </html>
