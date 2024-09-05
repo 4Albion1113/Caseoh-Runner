@@ -36,7 +36,8 @@
             top: calc(65% - 179px);
 
         }
-        body .boom:not(.active){
+
+        body .boom:not(.active) {
             display: none;
         }
     </style>
@@ -50,16 +51,18 @@
 <body>
     <p class="bigger">Score:</p>
     <img src="assets/caseohohoh.png" alt="casewho" class="casewho">
+    <img src="assets/bg.gif" alt="backround" class="backround">
     <img src="assets/bang.png" alt="boom" class="boom" width="179" height="179">
+    <script>
+        setTimeout(() => {
+            document.querySelector('.boom').classList.add('active')
+        }, 5000)
 
 
-    
-    
 
 
 
-
-
+    </script>
 
 </body>
 
