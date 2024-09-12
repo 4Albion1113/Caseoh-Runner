@@ -1,0 +1,39 @@
+
+body {
+    overflow: hidden;
+}
+
+body *:not(.backround) {
+    position: relative;
+
+    z-index: 1;
+
+    order: 1;
+}
+
+.backround {
+    order: 2;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.bigger {
+
+    font-size: 72px;
+
+}
+
+body .casewho,
+body .boom {
+    position: absolute;
+    left: 200px;
+    top: calc(65% - 179px);
+
+}
+
+body .boom:not(.active) {
+    display: none;
+}
