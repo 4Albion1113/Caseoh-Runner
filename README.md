@@ -1,8 +1,12 @@
-this is my game:
-player to ctrl caseoh
-obtacle food
-caseoh gets for he gets more chubby
-he gets too chubby there chance earthquake happens he fall into and next stage
-cake most points
-cookie least points 
-2 foor subway middle point
+food obstacle and gym equipment *
+earthquake (next stage)
+cave stage 2
+
+
+*food list and gym equipment
+ 1. cookie = 50 points
+ 2. chicken = 75 points
+ 3. cake = 100 points
+ a. yoga mat = -50
+ b. dumbell = -75
+ c. treadmil = -100

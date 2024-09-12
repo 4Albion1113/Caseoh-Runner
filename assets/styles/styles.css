@@ -29,11 +29,16 @@ body *:not(.backround) {
 body .casewho,
 body .boom {
     position: absolute;
-    left: 200px;
-    top: calc(65% - 179px);
+    left: 250px;
+    top: calc(65% - 110px);
 
 }
 
 body .boom:not(.active) {
     display: none;
+}
+.casewho {
+    width: 100px;
+    height: auto;
+transition: top 500ms ease-in-out;
 }
