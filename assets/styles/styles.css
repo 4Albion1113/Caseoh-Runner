@@ -1,4 +1,3 @@
-
 body {
     overflow: hidden;
 }
@@ -37,8 +36,28 @@ body .boom {
 body .boom:not(.active) {
     display: none;
 }
+
 .casewho {
     width: 100px;
     height: auto;
-transition: top 500ms ease-in-out;
+    transition: top 500ms ease-in-out;
+}
+
+.encounter {
+    height: 60px;
+    width: 60px;
+
+
+}
+
+body .food,
+body .gym-equipment {
+    position: absolute;
+    left: 900px;
+    top: calc(65% - 60px);
+}
+
+body .food *:not(.active),
+body .gym-equipment *:not(.active) {
+    display: none;
 }

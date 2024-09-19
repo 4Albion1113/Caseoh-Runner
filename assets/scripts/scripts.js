@@ -30,3 +30,15 @@ document.addEventListener('keyup', (event) => {
         }
     }
 })
+
+function showFoodAndGym(showElement) {
+    const currentlyActive = document.querySelectorAll('.food .active, .gym-equipment .active');
+    currentlyActive.forEach((element) => {
+        element.classList.remove('active');
+    }
+    );
+
+    const elementToShow = document.querySelector('.food .' + showElement +
+        ', .gym-equipment .' + showElement);
+    elementToShow.classList.add('active');
+}
