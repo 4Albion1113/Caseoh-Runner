@@ -53,7 +53,7 @@ body .boom:not(.active) {
 body .food,
 body .gym-equipment {
     position: absolute;
-    left: 900px;
+    right: 0px;
     top: calc(65% - 60px);
 }
 

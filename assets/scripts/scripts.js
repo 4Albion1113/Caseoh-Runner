@@ -42,3 +42,9 @@ function showFoodAndGym(showElement) {
         ', .gym-equipment .' + showElement);
     elementToShow.classList.add('active');
 }
+let score = 0
+document.querySelector('.start-game-button').addEventListener('click', (e) => {
+    e.target.style.display = 'none';
+    document.querySelector('.score').innerText = score
+    stage1();
+});
