@@ -56,6 +56,196 @@ function stage1() {
             });
         }, 5)
     }, 6000);
+
+    setTimeout(() => {
+        foodAction("cookie", 6);
+        setTimeout(() => {
+            monitorWhereIsCaseoh(6);
+            document.addEventListener('food_was_touched_6', () => {
+                whenTouched('cookie')
+            })
+        }, 5)
+    }, 7500);
+
+    setTimeout(() => {
+        foodAction("cookie", 7);
+        setTimeout(() => {
+            monitorWhereIsCaseoh(7);
+            document.addEventListener('food_was_touched_7', () => {
+                whenTouched('cookie')
+            })
+        }, 5)
+    }, 8000);
+
+    setTimeout(() => {
+        foodAction("chicken", 8);
+        setTimeout(() => {
+            monitorWhereIsCaseoh(8);
+            document.addEventListener('food_was_touched_8', () => {
+                whenTouched('chicken')
+            })
+        }, 5)
+    }, 9500);
+
+    setTimeout(() => {
+        foodAction("cake", 9);
+        setTimeout(() => {
+            monitorWhereIsCaseoh(9);
+            document.addEventListener('food_was_touched_9', () => {
+                whenTouched('cake')
+            });
+        }, 5)
+    }, 11000);
+
+    setTimeout(() => {
+        foodAction("chicken", 10);
+        setTimeout(() => {
+            monitorWhereIsCaseoh(10);
+            document.addEventListener('food_was_touched_10', () => {
+                whenTouched('chicken')
+            });
+        }, 5)
+    }, 13000);
+
+    setTimeout(() => {
+        foodAction("cake", 11);
+        setTimeout(() => {
+            monitorWhereIsCaseoh(11);
+            document.addEventListener('food_was_touched_11', () => {
+                whenTouched('cake')
+            });
+        }, 5)
+    }, 13500);
+
+    setTimeout(() => {
+        foodAction("cookie", 12);
+        setTimeout(() => {
+            monitorWhereIsCaseoh(12);
+            document.addEventListener('food_was_touched_12', () => {
+                whenTouched('cookie')
+            })
+        }, 5)
+    }, 15000);
+
+    setTimeout(() => {
+        foodAction("chicken", 13);
+        setTimeout(() => {
+            monitorWhereIsCaseoh(13);
+            document.addEventListener('food_was_touched_13', () => {
+                whenTouched('chicken')
+            });
+        }, 5)
+    }, 16000);
+
+    setTimeout(() => {
+        foodAction("chicken", 14);
+        setTimeout(() => {
+            monitorWhereIsCaseoh(14);
+            document.addEventListener('food_was_touched_14', () => {
+                whenTouched('chicken')
+            });
+        }, 5)
+    }, 17000);
+
+    setTimeout(() => {
+        foodAction("cookie", 15);
+        setTimeout(() => {
+            monitorWhereIsCaseoh(15);
+            document.addEventListener('food_was_touched_15', () => {
+                whenTouched('cookie')
+            })
+        }, 5)
+    }, 18000);
+
+    setTimeout(() => {
+        foodAction("cookie", 16);
+        setTimeout(() => {
+            monitorWhereIsCaseoh(16);
+            document.addEventListener('food_was_touched_16', () => {
+                whenTouched('cookie')
+            })
+        }, 5)
+    }, 18700);
+
+    setTimeout(() => {
+        foodAction("chicken", 17);
+        setTimeout(() => {
+            monitorWhereIsCaseoh(17);
+            document.addEventListener('food_was_touched_17', () => {
+                whenTouched('chicken')
+            })
+        }, 5)
+    }, 19500);
+
+    setTimeout(() => {
+        foodAction("cake", 18);
+        setTimeout(() => {
+            monitorWhereIsCaseoh(18);
+            document.addEventListener('food_was_touched_18', () => {
+                whenTouched('cake')
+            });
+        }, 5)
+    }, 21000);
+    
+    setTimeout(() => {
+        foodAction("cake", 19);
+        setTimeout(() => {
+            monitorWhereIsCaseoh(19);
+            document.addEventListener('food_was_touched_19', () => {
+                whenTouched('cake')
+            });
+        }, 5)
+    }, 22500);
+
+    setTimeout(() => {
+        foodAction("chicken", 20);
+        setTimeout(() => {
+            monitorWhereIsCaseoh(20);
+            document.addEventListener('food_was_touched_20', () => {
+                whenTouched('chicken')
+            })
+        }, 5)
+    }, 24000);
+
+    setTimeout(() => {
+        foodAction("chicken", 21);
+        setTimeout(() => {
+            monitorWhereIsCaseoh(21);
+            document.addEventListener('food_was_touched_21', () => {
+                whenTouched('chicken')
+            });
+        }, 5)
+    }, 25000);
+
+    setTimeout(() => {
+        foodAction("cake", 22);
+        setTimeout(() => {
+            monitorWhereIsCaseoh(22);
+            document.addEventListener('food_was_touched_22', () => {
+                whenTouched('cake')
+            });
+        }, 5)
+    }, 26500);
+
+    setTimeout(() => {
+        foodAction("cookie", 23);
+        setTimeout(() => {
+            monitorWhereIsCaseoh(23);
+            document.addEventListener('food_was_touched_23', () => {
+                whenTouched('cookie')
+            })
+        }, 5)
+    }, 28000);
+
+    setTimeout(() => {
+        foodAction("cookie", 24);
+        setTimeout(() => {
+            monitorWhereIsCaseoh(24);
+            document.addEventListener('food_was_touched_24', () => {
+                whenTouched('cookie')
+            })
+        }, 5)
+    }, 295000);
 }
 
 function foodAction(which_food, which_one) {
