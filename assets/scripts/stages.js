@@ -1,26 +1,68 @@
 function stage1() {
-    monitorWhereIsCaseoh();
-    foodAction("cookie");
-    document.addEventListener('food_was_touched', () => {
-        whenTouched('cookie')
-    })
+    foodAction("cookie", 0);
+    setTimeout(() => {
+        monitorWhereIsCaseoh(0);
+        document.addEventListener('food_was_touched_0', () => {
+            whenTouched('cookie')
+        })
+    }, 5)
+
+    setTimeout(() => {
+        foodAction("chicken", 1);
+        setTimeout(() => {
+            monitorWhereIsCaseoh(1);
+            document.addEventListener('food_was_touched_1', () => {
+                whenTouched('chicken')
+            });
+        }, 5)
+    }, 1500);
+
+    setTimeout(() => {
+        foodAction("cake", 2);
+        setTimeout(() => {
+            monitorWhereIsCaseoh(2);
+            document.addEventListener('food_was_touched_2', () => {
+                whenTouched('cake')
+            });
+        }, 5)
+    }, 3000);
+
+    setTimeout(() => {
+        foodAction("cookie", 3);
+        setTimeout(() => {
+            monitorWhereIsCaseoh(3);
+            document.addEventListener('food_was_touched_3', () => {
+                whenTouched('cookie')
+            })
+        }, 5)
+    }, 3200);
 }
 
-function foodAction(which_food) {
-    appearFood(which_food);
-    startMoving(which_food);
+function foodAction(which_food, which_one) {
+    appearFood(which_food, which_one);
+    startMoving(which_food, which_one);
 }
-function appearFood(which_food) {
-    showFoodAndGym(which_food);
+function appearFood(which_food, which_one) {
+    const mainfood = document.querySelector('.food_main');
+    const newElement = document.createElement('div');
+
+    newElement.classList.add('food')
+    newElement.classList.add('food-' + which_one)
+    newElement.innerHTML = mainfood.innerHTML
+    newElement.dataset.index = which_one
+
+    document.body.appendChild(newElement)
+    const elementToShow = document.querySelector('.food-' + which_one + ' .' + which_food);
+    elementToShow.classList.add('active');
 }
-function startMoving(which_food) {
-    const food = document.querySelector('.food');
+function startMoving(which_food, which_one) {
+    const food = document.querySelector('.food-' + which_one);
     let left = food.offsetLeft;
     setTimeout(() => {
         food.style.left = left - 5;
         left = food.offsetLeft;
         if (left > 0) {
-            startMoving()
+            startMoving(which_food, which_one)
         }
     })
 }
@@ -39,7 +81,8 @@ function whenTouched(which_food) {
 
 }
 
-function monitorWhereIsCaseoh() {
+
+function monitorWhereIsCaseoh(which_one) {
     const casewho = document.querySelector('.casewho')
     const rect = casewho.getBoundingClientRect();
     const top = rect.top,
@@ -47,7 +90,7 @@ function monitorWhereIsCaseoh() {
         left = rect.left,
         right = rect.right;
 
-    const food = document.querySelector('.food').getBoundingClientRect();
+    const food = document.querySelector('.food-' + which_one).getBoundingClientRect();
     const top_food = food.top,
         bottom_food = food.bottom,
         left_food = food.left,
@@ -60,7 +103,7 @@ function monitorWhereIsCaseoh() {
 
     if ((top_food_is_on_casewho || bottom_food_is_on_casewho) &&
         (left_food_is_on_casewho || right_food_is_on_casewho)) {
-        document.dispatchEvent(new Event('food_was_touched'))
+        document.dispatchEvent(new Event('food_was_touched_' + which_one))
     }
 
     const gym = document.querySelector('.gym-equipment').getBoundingClientRect();
@@ -71,8 +114,200 @@ function monitorWhereIsCaseoh() {
 
 
     setTimeout(() => {
-        monitorWhereIsCaseoh();
+        monitorWhereIsCaseoh(which_one);
     }, 10)
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

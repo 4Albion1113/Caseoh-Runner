@@ -8,6 +8,20 @@ const caseohohoh = document.querySelector('.casewho')
 const limit = caseohohoh.offsetTop;
 let clickHappened = false;
 
+function jump() {
+    if (!clickHappened) {
+        clickHappened = true;
+        caseohohoh.style.top = caseohohoh.offsetTop - 100 + 'px'
+        setTimeout(() => {
+            setTimeout(() => {
+                clickHappened = false;
+            }
+                , 500)
+            caseohohoh.style.top = limit + 'px'
+        }, 500)
+    }
+}
+
 document.addEventListener('keyup', (event) => {
     console.log(event.key)
     if (event.key === 'ArrowUp') {
@@ -16,19 +30,12 @@ document.addEventListener('keyup', (event) => {
         if (caseohohoh.offsetTop <= 0) {
         }
         else {
-            if (!clickHappened) {
-                clickHappened = true;
-                caseohohoh.style.top = caseohohoh.offsetTop - 100 + 'px'
-                setTimeout(() => {
-                    setTimeout(() => {
-                        clickHappened = false;
-                    }
-                        , 500)
-                    caseohohoh.style.top = limit + 'px'
-                }, 500)
-            }
+            jump();
         }
     }
+})
+document.addEventListener('touchend', (event) => {
+    jump();
 })
 
 function showFoodAndGym(showElement) {
