@@ -36,6 +36,26 @@ function stage1() {
             })
         }, 5)
     }, 3200);
+
+    setTimeout(() => {
+        foodAction("chicken", 4);
+        setTimeout(() => {
+            monitorWhereIsCaseoh(4);
+            document.addEventListener('food_was_touched_4', () => {
+                whenTouched('chicken')
+            });
+        }, 5)
+    }, 4600);
+
+    setTimeout(() => {
+        foodAction("chicken", 5);
+        setTimeout(() => {
+            monitorWhereIsCaseoh(5);
+            document.addEventListener('food_was_touched_5', () => {
+                whenTouched('chicken')
+            });
+        }, 5)
+    }, 6000);
 }
 
 function foodAction(which_food, which_one) {
